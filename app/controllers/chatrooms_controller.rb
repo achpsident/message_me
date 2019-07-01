@@ -2,7 +2,7 @@
     before_action :require_user
 
   def index
-    @messages = Message.all
+    @messages = Message.last(10)
     @message = Message.new
   end
 
